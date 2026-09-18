@@ -9,9 +9,9 @@ export default {
     extend: {
       colors: {
         'brand-navy': {
-          DEFAULT: '#0B0B45',
-          light: '#14146E',
-          dark: '#07072E',
+          DEFAULT: '#0B1B30',
+          light: '#132B4C',
+          dark: '#06101E',
         },
         'brand-black': '#000000',
         'brand-accent': {

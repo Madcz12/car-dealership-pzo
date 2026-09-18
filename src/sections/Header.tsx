@@ -77,7 +77,7 @@ export const Header: React.FC = () => {
           
           {/* Logo VeneCars Motors */}
           <div className="flex-shrink-0">
-            <Logo />
+            <Logo isLight={true} />
           </div>
 
           {/* Navegación Desktop (>= 768px / md) */}
@@ -91,9 +91,9 @@ export const Header: React.FC = () => {
                 <a
                   key={item.href}
                   href={item.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent ${
+                  className={`px-3 py-2 text-sm font-medium transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-navy ${
                     isActive 
-                      ? 'text-brand-accent font-semibold' 
+                      ? 'text-brand-white bg-brand-navy font-semibold' 
                       : 'text-brand-white/85 hover:text-brand-white hover:bg-white/10'
                   }`}
                 >
@@ -106,9 +106,10 @@ export const Header: React.FC = () => {
           {/* CTA Principal Desktop */}
           <div className="hidden md:flex items-center gap-3">
             <Button 
-              variant="accent" 
+              variant="navy" 
               size="md" 
               href="#contacto"
+              className="border border-white/20"
               icon={<PhoneCall className="w-4 h-4" />}
               iconPosition="left"
             >
@@ -119,16 +120,16 @@ export const Header: React.FC = () => {
           {/* Botón Menú Hamburguesa Mobile (< 768px) */}
           <div className="flex md:hidden items-center gap-2">
             <Button 
-              variant="accent" 
+              variant="navy" 
               size="sm" 
               href="#contacto"
-              className="text-xs px-3 py-1.5"
+              className="text-xs px-3 py-1.5 border border-white/20"
             >
               Cotizar
             </Button>
             <button
               type="button"
-              className="inline-flex items-center justify-center p-2 rounded-lg text-brand-white hover:text-brand-accent hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent transition-colors"
+              className="inline-flex items-center justify-center p-2 text-brand-white hover:text-white hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-navy transition-colors"
               aria-controls="mobile-menu"
               aria-expanded={isMobileMenuOpen}
               aria-label={isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú de navegación'}
@@ -163,9 +164,9 @@ export const Header: React.FC = () => {
                 key={item.href}
                 href={item.href}
                 onClick={closeMobileMenu}
-                className={`flex items-center justify-between px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                className={`flex items-center justify-between px-4 py-3 text-base font-medium transition-colors ${
                   isActive 
-                    ? 'bg-brand-accent/20 text-brand-accent font-semibold' 
+                    ? 'bg-brand-navy text-brand-white font-semibold' 
                     : 'text-brand-white/90 hover:bg-white/10 hover:text-brand-white'
                 }`}
               >
@@ -177,17 +178,17 @@ export const Header: React.FC = () => {
 
           <div className="pt-4 mt-2 border-t border-white/10">
             <Button 
-              variant="accent" 
+              variant="navy" 
               size="lg" 
               href="#contacto"
               onClick={closeMobileMenu}
-              className="w-full justify-center"
+              className="w-full justify-center border border-white/20"
               icon={<PhoneCall className="w-5 h-5" />}
               iconPosition="left"
             >
               Cotizar o Contactar
             </Button>
-            <p className="text-center text-xs text-brand-gray/60 mt-3">
+            <p className="text-center text-xs text-brand-white/80 mt-3 font-medium">
               Puerto Ordaz, Edo. Bolívar • Atención inmediata
             </p>
           </div>

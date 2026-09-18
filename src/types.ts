@@ -16,3 +16,26 @@ export interface ContactInfo {
   city: string;
   state: string;
 }
+
+export interface PromoVehicle {
+  modelName: string;
+  brand?: string;
+  category?: string;
+  imageUrl: string;
+  altText: string;
+}
+
+export interface PromoSlide {
+  id: string;
+  badge: string;
+  validity?: string;
+  title: string;
+  highlightedText?: string;
+  description: string;
+  disclaimer?: string;
+  ctaText: string;
+  ctaLink: string;
+  ctaExternal?: boolean;
+  vehicles: PromoVehicle[];
+}
+

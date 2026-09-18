@@ -9,7 +9,7 @@
 
   /* Accessibility focus ring */
   *:focus-visible {
-    outline: 2px solid theme('colors.brand-accent.DEFAULT');
+    outline: 2px solid theme('colors.brand-navy.DEFAULT');
     outline-offset: 2px;
   }
 }
