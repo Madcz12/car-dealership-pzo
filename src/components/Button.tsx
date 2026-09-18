@@ -2,7 +2,7 @@ import React from 'react';
 
 export interface ButtonProps {
   children: React.ReactNode;
-  variant?: 'navy' | 'accent' | 'outline' | 'outline-white' | 'ghost';
+  variant?: 'primary' | 'black' | 'navy' | 'accent' | 'outline' | 'outline-white' | 'ghost';
   size?: 'sm' | 'md' | 'lg';
   href?: string;
   onClick?: (e: React.MouseEvent<HTMLElement>) => void;
@@ -17,7 +17,7 @@ export interface ButtonProps {
 
 export const Button: React.FC<ButtonProps> = ({
   children,
-  variant = 'navy',
+  variant = 'primary',
   size = 'md',
   href,
   onClick,
@@ -29,7 +29,7 @@ export const Button: React.FC<ButtonProps> = ({
   iconPosition = 'right',
   ariaLabel,
 }) => {
-  const baseStyles = "inline-flex items-center justify-center font-heading font-medium tracking-normal rounded-none transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-navy focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed select-none";
+  const baseStyles = "inline-flex items-center justify-center font-heading font-medium tracking-normal rounded-none transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-black focus-visible:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed select-none";
 
   const sizeStyles = {
     sm: "px-4 py-2 text-xs gap-2",
@@ -38,11 +38,13 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   const variantStyles = {
-    navy: "bg-brand-navy text-white hover:bg-brand-navy-light active:bg-brand-navy-dark border border-brand-navy hover:border-brand-navy-light shadow-sm",
+    primary: "bg-brand-black text-white hover:bg-neutral-800 active:bg-black border border-brand-black hover:border-neutral-800 shadow-sm",
+    black: "bg-brand-black text-white hover:bg-neutral-800 active:bg-black border border-brand-black hover:border-neutral-800 shadow-sm",
+    navy: "bg-brand-black text-white hover:bg-neutral-800 active:bg-black border border-brand-black hover:border-neutral-800 shadow-sm",
     accent: "bg-brand-accent text-white hover:bg-brand-accent-hover active:bg-brand-accent-hover border border-brand-accent shadow-sm",
-    outline: "border border-brand-navy text-brand-navy hover:bg-brand-navy hover:text-white",
-    'outline-white': "border border-white/80 text-white hover:bg-white hover:text-brand-navy",
-    ghost: "text-brand-navy hover:bg-brand-gray/50",
+    outline: "border border-brand-black text-brand-black hover:bg-brand-black hover:text-white",
+    'outline-white': "border border-white/80 text-white hover:bg-white hover:text-brand-black",
+    ghost: "text-brand-black hover:bg-brand-gray/50",
   };
 
   const combinedStyles = `${baseStyles} ${sizeStyles[size]} ${variantStyles[variant]} ${className}`;

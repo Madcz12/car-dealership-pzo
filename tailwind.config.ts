@@ -8,12 +8,23 @@ export default {
   theme: {
     extend: {
       colors: {
+        'brand-black': {
+          DEFAULT: '#000000',
+          light: '#1A1A1A',
+          dark: '#000000',
+          surface: '#111111',
+        },
+        'brand-primary': {
+          DEFAULT: '#000000',
+          light: '#1A1A1A',
+          dark: '#000000',
+          surface: '#111111',
+        },
         'brand-navy': {
           DEFAULT: '#0B1B30',
           light: '#132B4C',
           dark: '#06101E',
         },
-        'brand-black': '#000000',
         'brand-accent': {
           DEFAULT: '#C0272D',
           hover: '#A01F25',
@@ -37,6 +48,15 @@ export default {
         body: ['Inter', 'sans-serif'],
         teko: ['Teko', 'sans-serif'],
         orbitron: ['Orbitron', 'sans-serif'],
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        marquee: 'marquee 25s linear infinite',
       },
     },
   },

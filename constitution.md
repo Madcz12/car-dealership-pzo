@@ -35,7 +35,8 @@ Construir una landing page profesional para una concesionaria de vehículos 0km 
 - ✅ Tono de marca: **confiable y corporativo** — serio, profesional. NO usar animaciones exageradas, colores saturados dominantes, ni lenguaje visual "juvenil/energético".
 - ✅ Estilo general: "profesional pero mid-profile" — evitar tanto el minimalismo de lujo extremo como el corporativismo rígido/aburrido.
 - ✅ Fotografía: siempre estática, alta calidad, tratamiento de color consistente entre imágenes.
-- ✅ Micro-interacciones permitidas: fade/slide sutil al hacer scroll, hover leve en tarjetas. NO carruseles automáticos, NO parallax agresivo, NO autoplay de ningún tipo.
+- ✅ Micro-interacciones permitidas: fade/slide sutil al hacer scroll, hover leve en tarjetas. NO carruseles automáticos de contenido/ofertas, NO parallax agresivo, NO autoplay de video/imagen.
+- **Excepción documentada:** se permite una marquesina (marquee) de desplazamiento continuo ÚNICAMENTE para elementos decorativos de confianza de marca (ej. logos de marcas representadas), nunca para contenido que el usuario deba leer y decidir sobre él (ofertas, promociones, catálogo). Debe respetar `prefers-reduced-motion`, pausarse en hover/focus, y mantener velocidad lenta y legible. Ver `specs/003-marcas/spec.md`.
 
 ### Paleta de color (fija — no debe alterarse sin aprobación del cliente)
 

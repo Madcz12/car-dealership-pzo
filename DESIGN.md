@@ -10,7 +10,7 @@
 ## 1. Physical Scene & Design Personality
 
 - **Physical Scene:** Un cliente ejecutivo o familiar en Puerto Ordaz revisando opciones de vehículos desde su smartphone en la oficina o su hogar, buscando certeza de garantía, confianza institucional y agilidad para cotizar por WhatsApp.
-- **Color Strategy:** **Committed** — La identidad descansa en la solidez del Azul Marino Profundo institucional (`brand-navy`), el balance de Neutros Tintados limpios (`brand-white`, `brand-gray`), y un acento Rojo Deportivo (`brand-accent`) reservado exclusivamente para CTAs de alta conversión y badges oficiales.
+- **Color Strategy:** **Committed** — La identidad descansa en la solidez del Negro Profundo institucional (`brand-black` / `brand-primary`), el balance de Neutros Tintados limpios (`brand-white`, `brand-gray`), y un acento Rojo Deportivo (`brand-accent`) reservado exclusivamente para CTAs de alta conversión y badges oficiales.
 
 ---
 
@@ -20,9 +20,9 @@
 
 | Token Role | Tailwind Class | Hex / OKLCH Value | Semantic Purpose |
 |---|---|---|---|
-| **Primary Brand (Deep Navy)** | `bg-brand-navy` / `text-brand-navy` | `#0B2447` / `oklch(0.24 0.07 260)` | Titulares, header, tarjetas destacadas, solidez de marca. |
-| **Primary Dark** | `bg-brand-navy-dark` | `#07072E` | Footer institucional y fondos de alto contraste. |
-| **Primary Light** | `bg-brand-navy-light` | `#14146E` | Hover de elementos navales e interacción secundaria. |
+| **Primary Brand (Deep Black)** | `bg-brand-black` / `text-brand-black` | `#000000` / `oklch(0 0 0)` | Titulares, header, elementos primarios, solidez y elegancia de marca. |
+| **Primary Light / Surface** | `bg-brand-black-light` / `bg-neutral-900` | `#1A1A1A` | Hover de elementos oscuros e interacción secundaria. |
+| **Primary Dark / Canvas** | `bg-brand-dark` | `#111111` | Fondos de alto contraste, texto principal y detalles. |
 | **Accent Action (Red)** | `bg-brand-accent` / `text-brand-accent` | `#C0272D` / `oklch(0.52 0.22 28)` | Botones de cotización principales, badges 0km, tags de alerta. |
 | **Accent Hover** | `bg-brand-accent-hover` | `#A01F25` | Hover en botones de acento. |
 | **Surface Base (White)** | `bg-brand-white` | `#FFFFFF` | Fondo principal de lectura. |
@@ -34,10 +34,10 @@
 | **Channel WhatsApp** | `bg-brand-whatsapp` | `#25D366` | Botón flotante y enlaces directos de chat. |
 
 ### Contrast & Accessibility Rules
-- **Texto en Body:** Contraste obligatorio $\ge 4.5:1$ contra el fondo (usar `text-brand-dark` o `text-brand-navy`, nunca grises deslavados).
-- **Titulares y Textos Grandes ($\ge 18\text{px}$):** Contraste $\ge 3:1$.
+- **Texto en Body:** Contraste obligatorio $\ge 4.5:1$ contra el fondo (usar `text-brand-dark` o `text-brand-black`, nunca grises deslavados).
+- **Titulares y Textos Grandes ($\ge 18\text{px}$):** Contraste $\ge 3:1$ (usar `text-brand-black`).
 - **Botón de Acento (`brand-accent`):** Texto blanco puro (`#FFFFFF`) con contraste $> 4.8:1$.
-- **Cero texto gris sobre fondos de color:** En fondos `brand-navy`, usar `text-white/90` o `text-white/75`.
+- **Cero texto gris sobre fondos oscuros:** En fondos `brand-black` o `brand-dark`, usar `text-white/90` o `text-white/75`.
 
 ---
 
@@ -46,8 +46,8 @@
 | Rol | Familia | Peso | Tamaño (Tailwind) | Tracking & Reglas |
 |---|---|---|---|---|
 | **Hero Display H1** | `Manrope` | Extrabold (800) | `text-3xl sm:text-5xl lg:text-6xl` | `tracking-tight` ($\ge -0.04\text{em}$), `leading-tight`, `text-wrap: balance` |
-| **Section Headings H2** | `Manrope` | Bold (700) | `text-2xl sm:text-3xl lg:text-4xl` | `tracking-tight`, `text-brand-navy`, `text-wrap: balance` |
-| **Card / Item H3** | `Manrope` | SemiBold (600) | `text-lg sm:text-xl` | `tracking-normal`, `text-brand-navy` |
+| **Section Headings H2** | `Manrope` | Bold (700) | `text-2xl sm:text-3xl lg:text-4xl` | `tracking-tight`, `text-brand-black`, `text-wrap: balance` |
+| **Card / Item H3** | `Manrope` | SemiBold (600) | `text-lg sm:text-xl` | `tracking-normal`, `text-brand-black` |
 | **Body Large** | `Inter` | Regular (400) | `text-base sm:text-lg` | `leading-relaxed`, max-width `65-75ch` |
 | **Body Standard** | `Inter` | Regular (400) / Medium (500) | `text-sm sm:text-base` | `leading-normal`, `text-brand-dark` |
 | **Badge / Label Kicker** | `Manrope` / `Inter` | SemiBold (600) | `text-xs` | `uppercase`, `tracking-wider`, padding `px-3 py-1` |
@@ -82,9 +82,9 @@
 
 ### Botones (`Button.tsx`)
 - **Accent:** `bg-brand-accent hover:bg-brand-accent-hover text-white font-medium shadow-sm transition-all duration-200 focus-visible:ring-2 focus-visible:ring-brand-accent`.
-- **Primary / Navy:** `bg-brand-navy hover:bg-brand-navy-light text-white transition-all duration-200`.
-- **Outline / Ghost:** Borde `border-brand-navy/20 hover:bg-brand-navy/5 text-brand-navy`.
-- **Border Radius:** `rounded-lg` (8px) a `rounded-xl` (12px). Botones de píldora `rounded-full` reservados para filtros o badges.
+- **Primary / Black:** `bg-brand-black hover:bg-neutral-800 text-white transition-all duration-200 focus-visible:ring-2 focus-visible:ring-brand-black`.
+- **Outline / Ghost:** Borde `border-brand-black/20 hover:bg-brand-black/5 text-brand-black`.
+- **Border Radius:** `rounded-lg` (8px) a `rounded-xl` (12px) o bordes afilados según el corte angular de marca. Botones de píldora `rounded-full` reservados para filtros o badges.
 
 ### Tarjetas de Vehículos y Servicios
 - Fondo `bg-white` con borde `border border-brand-gray/80` o sombra sutil `shadow-sm hover:shadow-md`.

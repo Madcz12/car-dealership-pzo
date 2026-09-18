@@ -39,3 +39,25 @@ export interface PromoSlide {
   vehicles: PromoVehicle[];
 }
 
+export interface ServiceCard {
+  id: string;
+  title: string;
+  subtitle?: string;
+  description?: string;
+  imageUrl: string;
+  imageAlt: string;
+  ctaText: string;
+  ctaLink: string;
+  isExternal?: boolean;
+}
+
+export interface BrandLogo {
+  id: string;
+  name: string;
+  logoUrl?: string;
+  altText: string;
+  description?: string;
+}
+
+
+

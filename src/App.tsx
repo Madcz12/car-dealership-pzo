@@ -1,6 +1,7 @@
 import React from 'react';
 import { Header } from './sections/Header';
 import { HeroSection } from './sections/HeroSection';
+import { BrandsSection } from './sections/BrandsSection';
 import { CatalogSection } from './sections/CatalogSection';
 import { ConsignmentSection } from './sections/ConsignmentSection';
 import { ServicesSection } from './sections/ServicesSection';
@@ -18,6 +19,7 @@ export const App: React.FC = () => {
       {/* Main Content Sections */}
       <main className="flex-grow">
         <HeroSection />
+        <BrandsSection />
         <CatalogSection />
         <ConsignmentSection />
         <ServicesSection />
