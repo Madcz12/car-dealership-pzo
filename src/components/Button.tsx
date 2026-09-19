@@ -40,7 +40,7 @@ export const Button: React.FC<ButtonProps> = ({
   const variantStyles = {
     primary: "bg-brand-black text-white hover:bg-neutral-800 active:bg-black border border-brand-black hover:border-neutral-800 shadow-sm",
     black: "bg-brand-black text-white hover:bg-neutral-800 active:bg-black border border-brand-black hover:border-neutral-800 shadow-sm",
-    navy: "bg-brand-black text-white hover:bg-neutral-800 active:bg-black border border-brand-black hover:border-neutral-800 shadow-sm",
+    navy: "bg-brand-black text-white hover:bg-neutral-800 active:bg-black border border-brand-black hover:border-neutral-800 shadow-sm", // Deprecado: mapeado a brand-black
     accent: "bg-brand-accent text-white hover:bg-brand-accent-hover active:bg-brand-accent-hover border border-brand-accent shadow-sm",
     outline: "border border-brand-black text-brand-black hover:bg-brand-black hover:text-white",
     'outline-white': "border border-white/80 text-white hover:bg-white hover:text-brand-black",

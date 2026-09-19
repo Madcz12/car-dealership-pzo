@@ -127,13 +127,13 @@ export const HeroSection: React.FC = () => {
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
-      className="relative w-full bg-gradient-to-r from-zinc-950 via-[#111317] to-black text-brand-white overflow-hidden select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-navy"
+      className="relative w-full bg-gradient-to-r from-zinc-950 via-[#111317] to-black text-brand-white overflow-hidden select-none focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent"
     >
       {/* Fondo y Ambientación Visual de Alto Impacto (Gradiente gris oscuro a negro según Spec 002) */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Luces sutiles de acento de marca sin comprometer contraste */}
-        <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-brand-navy-light/20 blur-3xl" />
-        <div className="absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-brand-navy/20 blur-3xl" />
+        <div className="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-white/[0.03] blur-3xl" />
+        <div className="absolute top-1/2 -right-32 w-96 h-96 rounded-full bg-white/[0.02] blur-3xl" />
         {/* Patrón sutil de malla oscura */}
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]" />
       </div>
@@ -157,8 +157,8 @@ export const HeroSection: React.FC = () => {
             
             {/* Badge de Oferta & Vigencia */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-2.5">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-navy border border-white/20 text-white text-xs font-bold uppercase tracking-wider">
-                <ShieldCheck className="w-3.5 h-3.5 shrink-0 text-blue-200" />
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-brand-black border border-white/20 text-white text-xs font-bold uppercase tracking-wider">
+                <ShieldCheck className="w-3.5 h-3.5 shrink-0 text-brand-gray" />
                 {currentSlide.badge}
               </span>
 
@@ -195,7 +195,7 @@ export const HeroSection: React.FC = () => {
             {/* Botón CTA Sólido */}
             <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3">
               <Button
-                variant="navy"
+                variant="primary"
                 size="lg"
                 href={currentSlide.ctaLink}
                 target={currentSlide.ctaExternal ? '_blank' : undefined}
@@ -229,7 +229,7 @@ export const HeroSection: React.FC = () => {
                         {vehicle.brand || 'VeneCars'}
                       </span>
                       {vehicle.category && (
-                        <span className="text-[10px] font-bold px-2 py-0.5 bg-brand-navy text-white border border-brand-navy-light">
+                        <span className="text-[10px] font-bold px-2 py-0.5 bg-brand-black text-white border border-white/20">
                           {vehicle.category}
                         </span>
                       )}
@@ -251,7 +251,7 @@ export const HeroSection: React.FC = () => {
                         <span className="font-heading font-black text-base sm:text-lg tracking-wider text-white uppercase drop-shadow-md">
                           {vehicle.modelName}
                         </span>
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-white bg-brand-navy px-2 py-0.5 backdrop-blur-xs border border-white/20">
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-white bg-brand-black px-2 py-0.5 backdrop-blur-xs border border-white/20">
                           0km Oficial
                         </span>
                       </div>
@@ -281,7 +281,7 @@ export const HeroSection: React.FC = () => {
             type="button"
             onClick={goToPrev}
             aria-label="Ver oferta anterior"
-            className="hidden md:flex absolute left-4 lg:left-6 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center bg-brand-navy/80 hover:bg-brand-navy text-white border border-white/20 hover:border-white/50 backdrop-blur-md transition-all duration-200 shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-navy active:scale-95 z-20"
+            className="hidden md:flex absolute left-4 lg:left-6 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center bg-black/80 hover:bg-black text-white border border-white/20 hover:border-white/50 backdrop-blur-md transition-all duration-200 shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent active:scale-95 z-20"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
@@ -290,7 +290,7 @@ export const HeroSection: React.FC = () => {
             type="button"
             onClick={goToNext}
             aria-label="Ver siguiente oferta"
-            className="hidden md:flex absolute right-4 lg:right-6 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center bg-brand-navy/80 hover:bg-brand-navy text-white border border-white/20 hover:border-white/50 backdrop-blur-md transition-all duration-200 shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-navy active:scale-95 z-20"
+            className="hidden md:flex absolute right-4 lg:right-6 top-1/2 -translate-y-1/2 w-11 h-11 items-center justify-center bg-black/80 hover:bg-black text-white border border-white/20 hover:border-white/50 backdrop-blur-md transition-all duration-200 shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent active:scale-95 z-20"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
@@ -314,9 +314,9 @@ export const HeroSection: React.FC = () => {
                 aria-selected={isActive}
                 aria-label={`Ir a oferta ${index + 1}: ${slide.title}`}
                 onClick={() => changeSlide(index)}
-                className={`h-2 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-navy ${
+                className={`h-2 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent ${
                   isActive 
-                    ? 'w-8 bg-brand-navy-light border border-white/40' 
+                    ? 'w-8 bg-white border border-white/40' 
                     : 'w-2.5 bg-white/40 hover:bg-white/70'
                 }`}
               />

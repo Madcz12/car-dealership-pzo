@@ -40,13 +40,15 @@ Construir una landing page profesional para una concesionaria de vehículos 0km 
 
 ### Paleta de color (fija — no debe alterarse sin aprobación del cliente)
 
+> **Actualización:** el color primario del proyecto se cambió de azul marino a **negro**. Esta tabla refleja la decisión vigente. `brand-navy` queda **deprecado** — no debe usarse en componentes nuevos, y debe reemplazarse en los componentes existentes que aún lo usen (`Button.tsx` variant por defecto, `ContactSection`, `WhyUsSection`, `Footer`).
+
 | Color | Hex de referencia (ajustar con asset real del logo) | Uso |
 |---|---|---|
-| Azul marino (primario) | `#0B2447` (aprox.) | Titulares, header, elementos de marca |
-| Blanco | `#FFFFFF` | Fondos principales |
+| Negro (primario) | `#0A0A0A` (aprox.) | Header, fondos oscuros, titulares principales, footer |
+| Blanco | `#FFFFFF` | Fondos principales, texto sobre fondo oscuro |
 | Gris piedra (secundario) | `#E5E7EB` (aprox.) | Fondos alternos, separadores |
-| Rojo (acento — uso puntual) | `#C0272D` (aprox.) | CTAs destacados, badges. NUNCA como color dominante de una sección completa |
-| Negro | `#111111` | Texto secundario, detalles |
+| Rojo (acento — uso puntual) | `#C0272D` (aprox.) | CTAs destacados, badges, etiquetas cortas. NUNCA como color dominante de una sección completa |
+| ~~Azul marino~~ | ~~`#0B2447`~~ | **Deprecado.** No usar en trabajo nuevo. Migrar usos existentes a negro. |
 
 ### Tipografía
 
