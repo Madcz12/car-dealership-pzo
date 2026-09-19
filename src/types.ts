@@ -93,6 +93,14 @@ export interface Testimonial {
   initials: string;
 }
 
+export interface ConsignmentBenefit {
+  id: string;
+  title: string;
+  description: string;
+  badge?: string;
+}
+
+
 
 
 
