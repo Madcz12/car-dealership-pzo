@@ -59,5 +59,25 @@ export interface BrandLogo {
   description?: string;
 }
 
+export interface VehicleSpec {
+  label: string;
+  value: string;
+}
+
+export interface Vehicle {
+  id: string;
+  brand: string;
+  model: string;
+  type: string;
+  priceDisplay: string;
+  priceNote?: string;
+  imageUrl: string;
+  imageAlt: string;
+  specs: VehicleSpec[];
+  badge?: string;
+  availableColors?: string[];
+}
+
+
 
 
