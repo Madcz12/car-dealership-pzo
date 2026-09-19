@@ -6,6 +6,8 @@ import { CatalogSection } from './sections/CatalogSection';
 import { ConsignmentSection } from './sections/ConsignmentSection';
 import { ServicesSection } from './sections/ServicesSection';
 import { WhyUsSection } from './sections/WhyUsSection';
+import { FinancingSection } from './sections/FinancingSection';
+import { TestimonialsSection } from './sections/TestimonialsSection';
 import { ContactSection } from './sections/ContactSection';
 import { FooterSection } from './sections/FooterSection';
 import { WhatsAppButton } from './components/WhatsAppButton';
@@ -16,7 +18,7 @@ export const App: React.FC = () => {
       {/* Header Sticky (Spec 001) */}
       <Header />
 
-      {/* Main Content Sections */}
+      {/* Main Content Sections (Orden estricto de constitution.md) */}
       <main className="flex-grow">
         <HeroSection />
         <BrandsSection />
@@ -24,6 +26,8 @@ export const App: React.FC = () => {
         <ConsignmentSection />
         <ServicesSection />
         <WhyUsSection />
+        <FinancingSection />
+        <TestimonialsSection />
         <ContactSection />
       </main>
 

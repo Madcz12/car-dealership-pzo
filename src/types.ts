@@ -78,6 +78,22 @@ export interface Vehicle {
   availableColors?: string[];
 }
 
+export interface FinancingStep {
+  stepNumber: string;
+  title: string;
+  description: string;
+  iconName?: string;
+}
+
+export interface Testimonial {
+  id: string;
+  quote: string;
+  author: string;
+  roleOrVehicle: string;
+  initials: string;
+}
+
+
 
 
 
