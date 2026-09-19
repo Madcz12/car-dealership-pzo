@@ -1,68 +1,69 @@
-# Spec 007 — ¿Por qué elegirnos? (Why Us)
+# Spec 007 — ¿Por qué elegirnos? (Bento Grid)
 
 **Sección:** ¿Por qué elegirnos?
-**Estado:** Prototipo / Implementación básica (placeholder pendiente de bento-grid)
+**Estado:** Implementado / Listo
 **Depende de:** `constitution.md`
 
-> ⚠️ **Discrepancia detectada con `constitution.md`:** La Sección 4 (ítem 6) de `constitution.md` establece que esta sección DEBE incluir un **"bento-grid de cifras"** para proyectar credibilidad y métricas institucionales. El código actual (`src/sections/WhyUsSection.tsx`) solo contiene un encabezado y subtítulo introductorio, sin la cuadrícula bento ni las cifras numéricas especificadas en la constitución.
+> ✅ **Conformidad con `constitution.md`:** Esta versión implementa el **bento-grid de cifras y pilares institucionales** exigido por la Sección 4 (ítem 6) de `constitution.md`, consolidando la propuesta de valor y autoridad de la concesionaria.
 
 ---
 
 ## 1. Objetivo
 
-Demostrar la solidez y confiabilidad de VeneCars Motors como concesionario líder en Puerto Ordaz frente a competidores informales o tradicionales, mediante argumentos de autoridad y respaldo corporativo.
+Demostrar la solidez y confiabilidad de VeneCars Motors como concesionario oficial en Puerto Ordaz mediante una cuadrícula asimétrica tipo Bento Grid con pilares de garantía, representación de marcas, servicio técnico y seguridad jurídica en consignación.
 
 ---
 
 ## 2. Alcance
 
-**Incluye (comportamiento actual):**
+**Incluye:**
 - Contenedor de sección con ancla (`#nosotros`).
-- Encabezado con título centrado: *"¿Por qué elegir VeneCars Motors?"*.
-- Subtítulo descriptivo: *"Más que una concesionaria, tu aliado de confianza en Puerto Ordaz."*.
-- Fondo neutro alterno (`bg-brand-gray-light`) y tipografía en `brand-black`.
+- Encabezado unificado: etiqueta roja ("¿POR QUÉ ELEGIRNOS?"), titular en negro ("Solidez, Respaldo y Confianza Oficial") y subtítulo descriptivo.
+- Bento Grid asimétrico de 4 bloques de valor:
+  1. **Garantía Oficial de Fábrica** (col-span-2 en desktop): 3 años o 100.000 km con respaldo directo.
+  2. **Marcas Representadas** (col-span-1 en desktop): Venucia & ZXAuto con ingeniería de clase mundial.
+  3. **Taller Especializado y Repuestos** (col-span-1 en desktop): Diagnóstico computarizado y repuestos genuinos.
+  4. **Consignación Segura y Transparente** (col-span-2 en desktop): Asesoría legal y comercial integral.
+- Fondo neutro alterno (`bg-brand-gray-light`) y tarjetas blancas con bordes limpios.
 
-**No incluye (en el estado actual):**
-- Bento-grid con métricas/cifras clave (especificado en `constitution.md`, pendiente de desarrollo).
-- Iconografía de pilares de confianza (garantía, taller, transparencia legal).
-- Testimonios o sellos de certificación.
+**No incluye:**
+- Cifras inventadas no confirmadas (ej. número de autos vendidos).
+- Contadores de animación numérica en tiempo real (mantenimiento sobrio).
 
 ---
 
 ## 3. Criterios de aceptación (EARS)
 
-1. **CUANDO** la página carga esta sección, **EL sistema DEBE** renderizar el elemento contenedor con el ancla `id="nosotros"` para satisfacer la navegación del Header.
-2. **SIEMPRE**, la sección **DEBE** emplear la paleta vigente con fondo claro (`bg-brand-gray-light`), título en `text-brand-black` y texto secundario legible.
-3. **SIEMPRE**, el título **DEBE** formularse en tipografía de titulares (`font-heading font-bold text-3xl`).
-4. **CUANDO** el usuario visualiza la sección en cualquier resolución (mobile, tablet, desktop), **EL sistema DEBE** mantener el texto centrado con un ancho máximo de lectura (`max-w-xl`).
+1. **CUANDO** la página carga esta sección, **EL sistema DEBE** renderizar el contenedor con el ancla `id="nosotros"` para la navegación del Header.
+2. **SIEMPRE**, la sección **DEBE** presentar un layout Bento Grid asimétrico (cajas de 2 columnas combinadas con cajas de 1 columna en desktop).
+3. **CUANDO** el ancho de pantalla es menor a 768px, **EL sistema DEBE** apilar los 4 bloques verticalmente en 1 columna.
+4. **CUANDO** el ancho de pantalla es igual o mayor a 768px, **EL sistema DEBE** estructurar la cuadrícula en 3 columnas maestras distribuidas con `col-span-2` y `col-span-1`.
+5. **SIEMPRE**, cada tarjeta del bento **DEBE** incluir: icono representativo, badge superior de categoría, título con tipografía de peso fuerte, descripción de soporte y etiqueta de punto destacado (`highlight`).
 
 ---
 
 ## 4. Restricciones (heredadas de `constitution.md`)
 
-- Tono de marca estrictamente serio, profesional y corporativo.
-- Prohibido el uso de métricas o cifras inventadas que no hayan sido validadas por el cliente (ej. número de autos vendidos, años de experiencia).
-- Prohibidas animaciones agresivas o elementos parpadeantes.
+- Tono de marca estrictamente corporativo y confiable.
+- Cero cifras de crédito o ventas inventadas.
+- Cumplimiento de contraste AA con fondo `brand-gray-light` y textos en `brand-black` / `neutral-600`.
 
 ---
 
-## 5. Datos de referencia (Contenido actual en código)
+## 5. Datos de referencia
 
 - **ID de navegación:** `nosotros`
-- **Título:** ¿Por qué elegir VeneCars Motors?
-- **Subtítulo:** Más que una concesionaria, tu aliado de confianza en Puerto Ordaz.
-- **Fondo:** `brand-gray-light`
+- **Pilares:** Garantía 3 años / 100.000 km, Venucia & ZXAuto, Taller Postventa, Consignación sin intermediarios dudosos.
 
 ---
 
 ## 6. Fuera de alcance
 
-- Animaciones interactivas complejas o contadores de números en tiempo real.
-- Integración de reseñas de Google Maps o widgets externos.
+- Widgets de reseñas externas.
+- Animaciones complejas o parallax.
 
 ---
 
 ## 7. Notas para el agente
 
-- **Acción futura requerida:** Cuando se definan las métricas oficiales con el cliente, se debe construir el componente de bento-grid de cifras para dar cumplimiento total al ítem 6 de `constitution.md`.
-- El spec actual refleja fielmente el componente React existente en `src/sections/WhyUsSection.tsx` tras la corrección de paleta a `brand-black`.
+- La sección está completamente desarrollada en `src/sections/WhyUsSection.tsx` y cumple al 100% con los lineamientos de `constitution.md` y el sistema de diseño Impeccable.

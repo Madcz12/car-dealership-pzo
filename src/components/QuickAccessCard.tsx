@@ -12,7 +12,7 @@ export const QuickAccessCard: React.FC<QuickAccessCardProps> = ({ card, index })
 
   return (
     <div 
-      className="group relative flex flex-col justify-end overflow-hidden bg-brand-black min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] border border-white/10 hover:border-white/30 transition-all duration-300 shadow-lg select-none"
+      className="group relative flex flex-col justify-end overflow-hidden bg-brand-black min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] border border-white/10 hover:border-white/50 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-2xl select-none"
       role="article"
       aria-label={card.title}
     >
@@ -20,7 +20,7 @@ export const QuickAccessCard: React.FC<QuickAccessCardProps> = ({ card, index })
       <img
         src={card.imageUrl}
         alt={card.imageAlt}
-        className="absolute inset-0 w-full h-full object-cover object-center transform transition-transform duration-400 ease-out group-hover:scale-105"
+        className="absolute inset-0 w-full h-full object-cover object-center"
         loading="lazy"
       />
 

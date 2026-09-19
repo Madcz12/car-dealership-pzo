@@ -240,7 +240,7 @@ export const HeroSection: React.FC = () => {
                       <img 
                         src={vehicle.imageUrl} 
                         alt={vehicle.altText}
-                        className="w-full h-full object-cover object-center transform group-hover:scale-105 transition-transform duration-500 ease-out"
+                        className="w-full h-full object-cover object-center"
                         loading={currentSlideIndex === 0 ? 'eager' : 'lazy'}
                       />
                       {/* Scrim / Sombra para asegurar contraste */}

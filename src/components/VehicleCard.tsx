@@ -15,7 +15,7 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle }) => {
 
   return (
     <article 
-      className="group flex flex-col bg-brand-white border border-brand-gray hover:border-brand-black/30 transition-all duration-300 shadow-sm hover:shadow-xl overflow-hidden"
+      className="group flex flex-col bg-brand-white border border-brand-gray hover:border-brand-black/40 hover:-translate-y-1 transition-all duration-300 shadow-sm hover:shadow-xl overflow-hidden"
       aria-labelledby={`vehicle-title-${vehicle.id}`}
     >
       {/* Contenedor de Imagen con tratamiento estático de alta calidad */}
@@ -23,7 +23,7 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle }) => {
         <img
           src={vehicle.imageUrl}
           alt={vehicle.imageAlt}
-          className="w-full h-full object-cover object-center transform transition-transform duration-300 ease-out group-hover:scale-105"
+          className="w-full h-full object-cover object-center"
           loading="lazy"
         />
 
