@@ -42,7 +42,7 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle }) => {
 
         {/* Tipo de carrocería en esquina inferior */}
         <div className="absolute bottom-2 left-3">
-          <span className="text-[11px] font-medium text-white/90 bg-black/60 backdrop-blur-xs px-2 py-0.5 border border-white/10">
+          <span className="text-[11px] font-medium text-white/90 bg-black/60 backdrop-blur-xs px-2 py-0.5 border border-brand-border">
             {vehicle.type}
           </span>
         </div>
@@ -123,3 +123,4 @@ export const VehicleCard: React.FC<VehicleCardProps> = ({ vehicle }) => {
     </article>
   );
 };
+

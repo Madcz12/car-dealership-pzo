@@ -66,10 +66,10 @@ export const Header: React.FC = () => {
 
   return (
     <header 
-      className={`sticky top-0 z-40 w-full transition-all duration-300 bg-brand-black ${
+      className={`sticky top-0 z-40 w-full transition-[background-color,border-color,box-shadow] duration-300 bg-brand-black py-3 ${
         isScrolled 
-          ? 'bg-brand-black/95 backdrop-blur-md shadow-lg border-b border-white/10 py-3' 
-          : 'border-b border-white/5 py-4 lg:py-5'
+          ? 'bg-brand-black/95 backdrop-blur-md shadow-lg border-b border-brand-border' 
+          : 'border-b border-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -109,7 +109,7 @@ export const Header: React.FC = () => {
               variant="primary" 
               size="md" 
               href="#contacto"
-              className="border border-white/20"
+              className="border border-brand-border"
               icon={<PhoneCall className="w-4 h-4" />}
               iconPosition="left"
             >
@@ -123,7 +123,7 @@ export const Header: React.FC = () => {
               variant="primary" 
               size="sm" 
               href="#contacto"
-              className="text-xs px-3 py-1.5 border border-white/20"
+              className="text-xs px-3 py-1.5 border border-brand-border"
             >
               Cotizar
             </Button>
@@ -149,7 +149,7 @@ export const Header: React.FC = () => {
       {/* Drawer / Menú Desplegable Mobile */}
       <div
         id="mobile-menu"
-        className={`md:hidden fixed inset-x-0 top-[65px] bg-brand-black border-b border-white/10 shadow-2xl transition-all duration-300 ease-in-out origin-top ${
+        className={`md:hidden fixed inset-x-0 top-[65px] bg-brand-black border-b border-brand-border shadow-2xl transition-all duration-300 ease-in-out origin-top ${
           isMobileMenuOpen 
             ? 'opacity-100 scale-y-100 max-h-[calc(100vh-65px)] overflow-y-auto' 
             : 'opacity-0 scale-y-95 max-h-0 pointer-events-none overflow-hidden'
@@ -176,13 +176,13 @@ export const Header: React.FC = () => {
             );
           })}
 
-          <div className="pt-4 mt-2 border-t border-white/10">
+          <div className="pt-4 mt-2 border-t border-brand-border">
             <Button 
               variant="primary" 
               size="lg" 
               href="#contacto"
               onClick={closeMobileMenu}
-              className="w-full justify-center border border-white/20"
+              className="w-full justify-center border border-brand-border"
               icon={<PhoneCall className="w-5 h-5" />}
               iconPosition="left"
             >
@@ -197,3 +197,4 @@ export const Header: React.FC = () => {
     </header>
   );
 };
+

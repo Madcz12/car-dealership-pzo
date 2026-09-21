@@ -20,16 +20,17 @@
 
 | Token Role | Tailwind Class | Hex / OKLCH Value | Semantic Purpose |
 |---|---|---|---|
-| **Primary Brand (Deep Black)** | `bg-brand-black` / `text-brand-black` | `#000000` / `oklch(0 0 0)` | Titulares, header, elementos primarios, solidez y elegancia de marca. |
-| **Primary Light / Surface** | `bg-brand-black-light` / `bg-neutral-900` | `#1A1A1A` | Hover de elementos oscuros e interacción secundaria. |
-| **Primary Dark / Canvas** | `bg-brand-dark` | `#111111` | Fondos de alto contraste, texto principal y detalles. |
+| **Primary Brand (Grafito)** | `bg-brand-black` / `text-brand-black` | `#0F0F11` | Titulares, header, elementos primarios, solidez y elegancia de marca. |
+| **Primary Light / Surface** | `bg-brand-black-light` | `#18181B` | Hover de elementos oscuros e interacción secundaria. |
+| **Primary Dark / Canvas** | `bg-brand-dark` | `#0F0F11` | Fondos de alto contraste, texto principal y detalles. |
 | **Accent Action (Red)** | `bg-brand-accent` / `text-brand-accent` | `#C0272D` / `oklch(0.52 0.22 28)` | Botones de cotización principales, badges 0km, tags de alerta. |
 | **Accent Hover** | `bg-brand-accent-hover` | `#A01F25` | Hover en botones de acento. |
 | **Surface Base (White)** | `bg-brand-white` | `#FFFFFF` | Fondo principal de lectura. |
 | **Surface Alt (Light Gray)** | `bg-brand-gray-light` | `#F8FAFC` | Alternancia rítmica de secciones. |
 | **Surface Neutral** | `bg-brand-gray-surface` | `#F3F4F6` | Contenedores de tarjetas y cajas de formulario. |
-| **Border / Divider** | `border-brand-gray` | `#E5E7EB` | Separadores y bordes de tarjeta limpios. |
-| **Body Ink (Dark)** | `text-brand-dark` | `#111111` | Texto principal de párrafos y especificaciones técnicas. |
+| **Border / Divider (Light)** | `border-brand-gray` | `#E5E7EB` | Separadores y bordes de tarjeta en fondos claros. |
+| **Border / Divider (Dark)** | `border-brand-border` | `#27272A` | Bordes estructurales en fondos oscuros (reemplaza `border-white/10`). |
+| **Body Ink (Dark)** | `text-brand-dark` | `#0F0F11` | Texto principal de párrafos y especificaciones técnicas. |
 | **Muted Ink (Slate)** | `text-brand-gray-dark` | `#6B7280` / `#9CA3AF` | Metadatos, subtítulos y pies de imagen. |
 | **Channel WhatsApp** | `bg-brand-whatsapp` | `#25D366` | Botón flotante y enlaces directos de chat. |
 
@@ -45,12 +46,12 @@
 
 | Rol | Familia | Peso | Tamaño (Tailwind) | Tracking & Reglas |
 |---|---|---|---|---|
-| **Hero Display H1** | `Manrope` | Extrabold (800) | `text-3xl sm:text-5xl lg:text-6xl` | `tracking-tight` ($\ge -0.04\text{em}$), `leading-tight`, `text-wrap: balance` |
-| **Section Headings H2** | `Manrope` | Bold (700) | `text-2xl sm:text-3xl lg:text-4xl` | `tracking-tight`, `text-brand-black`, `text-wrap: balance` |
-| **Card / Item H3** | `Manrope` | SemiBold (600) | `text-lg sm:text-xl` | `tracking-normal`, `text-brand-black` |
+| **Hero Display H1** | `Plus Jakarta Sans` | Extrabold (800) | `text-3xl sm:text-5xl lg:text-6xl` | `tracking-tight` ($\ge -0.04\text{em}$), `leading-tight`, `text-wrap: balance` |
+| **Section Headings H2** | `Plus Jakarta Sans` | Bold (700) | `text-2xl sm:text-3xl lg:text-4xl` | `tracking-tight`, `text-brand-black`, `text-wrap: balance` |
+| **Card / Item H3** | `Plus Jakarta Sans` | SemiBold (600) | `text-lg sm:text-xl` | `tracking-normal`, `text-brand-black` |
 | **Body Large** | `Inter` | Regular (400) | `text-base sm:text-lg` | `leading-relaxed`, max-width `65-75ch` |
 | **Body Standard** | `Inter` | Regular (400) / Medium (500) | `text-sm sm:text-base` | `leading-normal`, `text-brand-dark` |
-| **Badge / Label Kicker** | `Manrope` / `Inter` | SemiBold (600) | `text-xs` | `uppercase`, `tracking-wider`, padding `px-3 py-1` |
+| **Badge / Label Kicker** | `Plus Jakarta Sans` / `Inter` | SemiBold (600) | `text-xs` | `uppercase`, `tracking-wider`, padding `px-3 py-1` |
 | **Display Accents (Specs)** | `Teko` / `Orbitron` | Bold / Medium | `text-xl sm:text-2xl` | Uso puntual exclusivo para cifras numéricas destacadas |
 
 ### Typographic Guardrails
@@ -93,7 +94,7 @@
 
 ### Header Sticky & Navegación
 - Transición suave de elevación al hacer scroll (`window.scrollY > 20`).
-- Blur controlado: `backdrop-blur-md bg-brand-black/95 border-b border-white/10`.
+- Blur controlado: `backdrop-blur-md bg-brand-black/95 border-b border-brand-border`.
 - Menú mobile con drawer animado en altura/opacidad y bloqueo de scroll en el `body`.
 
 ---

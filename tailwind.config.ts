@@ -9,16 +9,16 @@ export default {
     extend: {
       colors: {
         'brand-black': {
-          DEFAULT: '#000000',
-          light: '#1A1A1A',
-          dark: '#000000',
-          surface: '#111111',
+          DEFAULT: '#0F0F11',
+          light: '#18181B',
+          dark: '#0A0A0B',
+          surface: '#141416',
         },
         'brand-primary': {
-          DEFAULT: '#000000',
-          light: '#1A1A1A',
-          dark: '#000000',
-          surface: '#111111',
+          DEFAULT: '#0F0F11',
+          light: '#18181B',
+          dark: '#0A0A0B',
+          surface: '#141416',
         },
         'brand-navy': {
           DEFAULT: '#0B1B30',
@@ -36,7 +36,8 @@ export default {
           surface: '#F3F4F6',
           dark: '#9CA3AF',
         },
-        'brand-dark': '#111111',
+        'brand-dark': '#0F0F11',
+        'brand-border': '#27272A',
         'brand-white': '#FFFFFF',
         'brand-whatsapp': {
           DEFAULT: '#25D366',
@@ -44,7 +45,7 @@ export default {
         },
       },
       fontFamily: {
-        heading: ['Manrope', 'sans-serif'],
+        heading: ['Plus Jakarta Sans', 'sans-serif'],
         body: ['Inter', 'sans-serif'],
         teko: ['Teko', 'sans-serif'],
         orbitron: ['Orbitron', 'sans-serif'],
@@ -62,3 +63,4 @@ export default {
   },
   plugins: [],
 } satisfies Config;
+

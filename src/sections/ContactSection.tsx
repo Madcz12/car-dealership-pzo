@@ -109,7 +109,7 @@ export const ContactSection: React.FC = () => {
         {/* 3 Tarjetas de Contacto Directo Existentes (EARS #1) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 lg:mb-16">
           {/* Ubicación Física */}
-          <div className="p-6 bg-white/5 border border-white/10 flex flex-col items-center text-center">
+          <div className="p-6 bg-white/5 border border-brand-border flex flex-col items-center text-center">
             <MapPin className="w-8 h-8 text-white mb-3" />
             <h3 className="font-heading font-semibold text-lg text-brand-white mb-2">Ubicación</h3>
             <p className="text-sm text-brand-gray leading-relaxed">
@@ -119,20 +119,20 @@ export const ContactSection: React.FC = () => {
           </div>
 
           {/* Atención Directa WhatsApp */}
-          <div className="p-6 bg-white/5 border border-white/10 flex flex-col items-center text-center">
+          <div className="p-6 bg-white/5 border border-brand-border flex flex-col items-center text-center">
             <Phone className="w-8 h-8 text-white mb-3" />
             <h3 className="font-heading font-semibold text-lg text-brand-white mb-2">Atención Directa</h3>
             <p className="text-sm text-brand-gray mb-4">
               Lunes a Sábado • Asesoría personalizada
             </p>
             {/* TODO: Reemplazar con el número oficial cuando se confirme */}
-            <Button variant="primary" size="sm" href="https://wa.me/584140000000" target="_blank" className="border border-white/20">
+            <Button variant="primary" size="sm" href="https://wa.me/584140000000" target="_blank" className="border border-brand-border">
               Escribir por WhatsApp
             </Button>
           </div>
 
           {/* Redes Sociales Instagram */}
-          <div className="p-6 bg-white/5 border border-white/10 flex flex-col items-center text-center">
+          <div className="p-6 bg-white/5 border border-brand-border flex flex-col items-center text-center">
             <svg 
               className="w-8 h-8 text-white mb-3" 
               viewBox="0 0 24 24" 
@@ -166,8 +166,8 @@ export const ContactSection: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
           {/* Columna Mapa Embebido (5 columnas en desktop) */}
-          <div className="lg:col-span-5 flex flex-col bg-white/5 border border-white/10 overflow-hidden min-h-[300px] sm:min-h-[380px]">
-            <div className="p-4 border-b border-white/10 flex items-center justify-between">
+          <div className="lg:col-span-5 flex flex-col bg-white/5 border border-brand-border overflow-hidden min-h-[300px] sm:min-h-[380px]">
+            <div className="p-4 border-b border-brand-border flex items-center justify-between">
               <span className="text-xs uppercase font-heading font-bold tracking-wider text-brand-gray">
                 Sede Principal en Puerto Ordaz
               </span>
@@ -186,7 +186,7 @@ export const ContactSection: React.FC = () => {
           </div>
 
           {/* Columna Formulario de Contacto (7 columnas en desktop) */}
-          <div className="lg:col-span-7 p-6 sm:p-8 bg-white/5 border border-white/10 flex flex-col justify-between">
+          <div className="lg:col-span-7 p-6 sm:p-8 bg-white/5 border border-brand-border flex flex-col justify-between">
             <div>
               <h3 className="font-heading font-bold text-xl sm:text-2xl text-white mb-2">
                 Envíanos una consulta
@@ -220,7 +220,7 @@ export const ContactSection: React.FC = () => {
                       onChange={handleChange}
                       placeholder="Ej. Carlos Mendoza"
                       className={`w-full px-3.5 py-2.5 text-sm bg-black/40 border text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-brand-accent transition-colors ${
-                        errors.name ? 'border-brand-accent' : 'border-white/15 focus:border-white/40'
+                        errors.name ? 'border-brand-accent' : 'border-brand-border focus:border-white/50'
                       }`}
                     />
                     {errors.name && (
@@ -244,7 +244,7 @@ export const ContactSection: React.FC = () => {
                       onChange={handleChange}
                       placeholder="Ej. +58 414 1234567"
                       className={`w-full px-3.5 py-2.5 text-sm bg-black/40 border text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-brand-accent transition-colors ${
-                        errors.phone ? 'border-brand-accent' : 'border-white/15 focus:border-white/40'
+                        errors.phone ? 'border-brand-accent' : 'border-brand-border focus:border-white/50'
                       }`}
                     />
                     {errors.phone && (
@@ -269,7 +269,7 @@ export const ContactSection: React.FC = () => {
                     value={formData.vehicle}
                     onChange={handleChange}
                     placeholder="Ej. ZXAuto Grandlion, Venucia V-Online, Servicio de Taller..."
-                    className="w-full px-3.5 py-2.5 text-sm bg-black/40 border border-white/15 text-white placeholder-neutral-500 focus:outline-none focus:border-white/40 focus:ring-2 focus:ring-brand-accent transition-colors"
+                    className="w-full px-3.5 py-2.5 text-sm bg-black/40 border border-brand-border text-white placeholder-neutral-500 focus:outline-none focus:border-white/50 focus:ring-2 focus:ring-brand-accent transition-colors"
                   />
                 </div>
 
@@ -286,7 +286,7 @@ export const ContactSection: React.FC = () => {
                     onChange={handleChange}
                     placeholder="Escribe tu consulta o requerimiento específico..."
                     className={`w-full px-3.5 py-2.5 text-sm bg-black/40 border text-white placeholder-neutral-500 focus:outline-none focus:ring-2 focus:ring-brand-accent transition-colors resize-none ${
-                      errors.message ? 'border-brand-accent' : 'border-white/15 focus:border-white/40'
+                      errors.message ? 'border-brand-accent' : 'border-brand-border focus:border-white/50'
                     }`}
                   />
                   {errors.message && (
@@ -317,3 +317,4 @@ export const ContactSection: React.FC = () => {
     </section>
   );
 };
+

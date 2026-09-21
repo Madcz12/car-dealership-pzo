@@ -12,7 +12,7 @@ export const QuickAccessCard: React.FC<QuickAccessCardProps> = ({ card, index })
 
   return (
     <div 
-      className="group relative flex flex-col justify-end overflow-hidden bg-brand-black min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] border border-white/10 hover:border-white/50 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-2xl select-none"
+      className="group relative flex flex-col justify-end overflow-hidden bg-brand-black min-h-[380px] sm:min-h-[420px] lg:min-h-[460px] border border-brand-border hover:border-white/30 hover:-translate-y-1 transition-all duration-300 shadow-lg hover:shadow-2xl select-none"
       role="article"
       aria-label={card.title}
     >
@@ -33,7 +33,7 @@ export const QuickAccessCard: React.FC<QuickAccessCardProps> = ({ card, index })
       {/* Número / Indicador sutil de pilar en esquina superior */}
       {typeof index === 'number' && (
         <div className="absolute top-4 left-4 z-10">
-          <span className="inline-flex items-center justify-center text-xs font-heading font-bold text-white/60 tracking-widest uppercase px-2 py-1 bg-black/40 backdrop-blur-xs border border-white/10">
+          <span className="inline-flex items-center justify-center text-xs font-heading font-bold text-white/60 tracking-widest uppercase px-2 py-1 bg-black/40 backdrop-blur-xs border border-brand-border">
             0{index + 1}
           </span>
         </div>
@@ -76,3 +76,4 @@ export const QuickAccessCard: React.FC<QuickAccessCardProps> = ({ card, index })
     </div>
   );
 };
+
