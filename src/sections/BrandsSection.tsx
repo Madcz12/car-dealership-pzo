@@ -34,9 +34,9 @@ export const BrandsSection: React.FC = () => {
       id="marcas"
       role="region"
       aria-label="Marcas representadas: Venucia y ZXAuto"
-      className="relative w-full py-10 sm:py-12 bg-brand-white border-y border-brand-gray/50 overflow-hidden select-none"
+      className="relative w-full py-8 sm:py-10 bg-brand-white border-y border-brand-gray/50 overflow-hidden select-none"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6 sm:mb-8 text-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-4 sm:mb-6 text-center">
         <p className="text-xs uppercase tracking-widest font-heading font-extrabold text-neutral-500">
           Distribuidor Autorizado Oficial en Puerto Ordaz
         </p>

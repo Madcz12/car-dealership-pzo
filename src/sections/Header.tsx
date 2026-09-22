@@ -14,13 +14,28 @@ const NAV_ITEMS: NavItem[] = [
   { label: 'Contacto', href: '#contacto' },
 ];
 
-export const Header: React.FC = () => {
+export interface HeaderProps {
+  onNavigateToCatalog?: () => void;
+  onNavigateToHome?: (sectionId?: string) => void;
+  isCatalogPage?: boolean;
+}
+
+export const Header: React.FC<HeaderProps> = ({
+  onNavigateToCatalog,
+  onNavigateToHome,
+  isCatalogPage = false,
+}) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('inicio');
 
   // Detección de scroll para aplicar elevación y estilo sticky
   useEffect(() => {
+    if (isCatalogPage) {
+      setActiveSection('catalogo');
+      return;
+    }
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
 
@@ -39,7 +54,7 @@ export const Header: React.FC = () => {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isCatalogPage]);
 
   // Bloquear scroll del body cuando el menú mobile está abierto y escuchar tecla Escape
   useEffect(() => {
@@ -64,6 +79,29 @@ export const Header: React.FC = () => {
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
+  const handleNavClick = (e: React.MouseEvent, item: NavItem) => {
+    if (item.href === '#catalogo') {
+      if (onNavigateToCatalog) {
+        e.preventDefault();
+        onNavigateToCatalog();
+      }
+    } else if (isCatalogPage) {
+      if (onNavigateToHome) {
+        e.preventDefault();
+        const sectionId = item.href.replace('#', '');
+        onNavigateToHome(sectionId);
+      }
+    }
+    closeMobileMenu();
+  };
+
+  const handleLogoClick = (e: React.MouseEvent) => {
+    if (isCatalogPage && onNavigateToHome) {
+      e.preventDefault();
+      onNavigateToHome();
+    }
+  };
+
   return (
     <header 
       className={`sticky top-0 z-40 w-full transition-[background-color,border-color,box-shadow] duration-300 bg-brand-black py-3 ${
@@ -76,7 +114,7 @@ export const Header: React.FC = () => {
         <div className="flex items-center justify-between">
           
           {/* Logo VeneCars Motors */}
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 cursor-pointer" onClick={handleLogoClick}>
             <Logo isLight={true} />
           </div>
 
@@ -91,7 +129,8 @@ export const Header: React.FC = () => {
                 <a
                   key={item.href}
                   href={item.href}
-                  className={`px-3 py-2 text-sm font-medium transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent ${
+                  onClick={(e) => handleNavClick(e, item)}
+                  className={`px-3 py-2 text-sm font-medium transition-colors duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-accent cursor-pointer ${
                     isActive 
                       ? 'text-brand-white bg-white/15 font-semibold' 
                       : 'text-brand-white/85 hover:text-brand-white hover:bg-white/10'
@@ -109,6 +148,7 @@ export const Header: React.FC = () => {
               variant="primary" 
               size="md" 
               href="#contacto"
+              onClick={(e) => isCatalogPage && onNavigateToHome && (e.preventDefault(), onNavigateToHome('contacto'))}
               className="border border-brand-border"
               icon={<PhoneCall className="w-4 h-4" />}
               iconPosition="left"
@@ -123,6 +163,7 @@ export const Header: React.FC = () => {
               variant="primary" 
               size="sm" 
               href="#contacto"
+              onClick={(e) => isCatalogPage && onNavigateToHome && (e.preventDefault(), onNavigateToHome('contacto'))}
               className="text-xs px-3 py-1.5 border border-brand-border"
             >
               Cotizar
@@ -163,7 +204,7 @@ export const Header: React.FC = () => {
               <a
                 key={item.href}
                 href={item.href}
-                onClick={closeMobileMenu}
+                onClick={(e) => handleNavClick(e, item)}
                 className={`flex items-center justify-between px-4 py-3 text-base font-medium transition-colors ${
                   isActive 
                     ? 'bg-white/15 text-brand-white font-semibold' 

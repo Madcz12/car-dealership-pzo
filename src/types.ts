@@ -71,11 +71,14 @@ export interface Vehicle {
   type: string;
   priceDisplay: string;
   priceNote?: string;
-  imageUrl: string;
-  imageAlt: string;
+  imageUrl?: string;
+  imageAlt?: string;
   specs: VehicleSpec[];
   badge?: string;
   availableColors?: string[];
+  year?: string | number;
+  mileage?: string;
+  category?: 'new' | 'pre-owned' | 'service';
 }
 
 export interface FinancingStep {
