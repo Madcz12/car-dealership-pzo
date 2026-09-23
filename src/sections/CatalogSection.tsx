@@ -53,11 +53,11 @@ export const CatalogSection: React.FC<CatalogSectionProps> = ({ onNavigateToCata
           </div>
 
           {/* Lado Derecho: Imagen de Vehículos en gran tamaño */}
-          <div className="lg:col-span-7 flex items-center justify-center lg:justify-end overflow-visible">
+          <div className="lg:col-span-7 flex items-center justify-center lg:justify-end overflow-hidden">
             <img
               src="/OurVehicles/ourvehicles.webp"
               alt="Gama oficial de vehículos VeneCars Motors"
-              className="w-full h-auto object-contain object-center max-h-[480px] sm:max-h-[560px] lg:max-h-[640px] drop-shadow-2xl transform lg:scale-110 xl:scale-115 origin-center lg:origin-right transition-transform duration-300"
+              className="w-full h-auto max-h-[480px] sm:max-h-[560px] lg:max-h-[640px] drop-shadow-2xl scale-[1.3] sm:scale-[1.35] lg:scale-[1.45] xl:scale-[1.5] origin-right transition-transform duration-300"
               loading="eager"
             />
           </div>
