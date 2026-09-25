@@ -3,12 +3,7 @@ import { Header } from './sections/Header';
 import { HeroSection } from './sections/HeroSection';
 import { BrandsSection } from './sections/BrandsSection';
 import { CatalogSection } from './sections/CatalogSection';
-import { ConsignmentSection } from './sections/ConsignmentSection';
 import { ServicesSection } from './sections/ServicesSection';
-import { WhyUsSection } from './sections/WhyUsSection';
-import { FinancingSection } from './sections/FinancingSection';
-import { TestimonialsSection } from './sections/TestimonialsSection';
-import { ContactSection } from './sections/ContactSection';
 import { FooterSection } from './sections/FooterSection';
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { CatalogPage } from './pages/CatalogPage';
@@ -71,12 +66,7 @@ export const App: React.FC = () => {
             <HeroSection />
             <BrandsSection />
             <CatalogSection onNavigateToCatalog={navigateToCatalog} />
-            <ConsignmentSection />
             <ServicesSection />
-            <WhyUsSection />
-            <FinancingSection />
-            <TestimonialsSection />
-            <ContactSection />
           </>
         )}
       </main>
