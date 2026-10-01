@@ -90,7 +90,7 @@ export const ServicesSection: React.FC = () => {
       {/* Anchor de compatibilidad con enlaces hacia #taller-repuestos */}
       <div id="taller-repuestos" className="absolute -top-24 invisible" aria-hidden="true" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="w-full max-w-full px-4 sm:px-6 lg:px-8 xl:px-12">
         
         {/* Encabezado de la sección */}
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
